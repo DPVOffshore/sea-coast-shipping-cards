@@ -1,0 +1,274 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px 40px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 14px 44px rgba(10, 32, 54, 0.16);
+  align-self: flex-start;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  padding: 26px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* subtle teal wave glow behind the logo */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -1px 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 50%, var(--teal) 100%);
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.97;
+}
+
+.avatarRing {
+  margin-top: 20px;
+  padding: 4px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff 0%, var(--teal-light) 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  line-height: 0;
+}
+
+.avatar {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #f2f4f7;
+  display: block;
+}
+
+/* ---------- Identity ---------- */
+.identity {
+  padding: 22px 28px 0;
+  text-align: center;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.08;
+  letter-spacing: -0.2px;
+  color: var(--navy);
+}
+.name span {
+  font-weight: 800;
+}
+
+.role {
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  margin-top: 7px;
+}
+
+.creds {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.org {
+  color: var(--muted);
+  font-size: 12.5px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  display: inline-block;
+}
+
+/* ---------- Contact rows ---------- */
+.contacts {
+  padding: 16px 20px 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background 0.15s;
+}
+.row:active {
+  background: var(--tint);
+}
+@media (hover: hover) {
+  .row:hover {
+    background: var(--tint);
+  }
+}
+
+/* Rows whose value wraps over several lines (the address) look
+   better with the icon aligned to the top rather than floating
+   in the middle of the block. */
+.rowTop {
+  align-items: flex-start;
+}
+
+.ic {
+  flex: 0 0 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+}
+.ic svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icWa {
+  background: #e7f7ee;
+  color: #1a8a52;
+}
+
+.txt {
+  min-width: 0;
+}
+.txt small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 1px;
+}
+.txt span {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+  line-height: 1.42;
+}
+
+.mapLink {
+  display: flex !important;
+  width: fit-content;
+  align-items: center;
+  gap: 3px;
+  margin-top: 4px;
+  color: var(--teal) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+.mapLink svg {
+  width: 13px;
+  height: 13px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Save button ---------- */
+.saveWrap {
+  padding: 14px 20px 22px;
+}
+.save {
+  width: 100%;
+  border: none;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+  padding: 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 8px 18px rgba(15, 45, 74, 0.28);
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+.save:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(15, 45, 74, 0.28);
+}
+.save:focus-visible {
+  outline: 3px solid var(--teal-light);
+  outline-offset: 2px;
+}
+.save svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--sand);
+  border-top: 1px solid var(--line);
+  padding: 18px 24px 24px;
+}
+.footHead {
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chip {
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 11px;
+  border-radius: 20px;
+}
+.chipAlt {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+.where {
+  margin-top: 16px;
+}

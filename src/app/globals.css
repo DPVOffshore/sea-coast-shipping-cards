@@ -1,0 +1,48 @@
+:root {
+  --font-display: "Barlow Semi Condensed", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Sampled straight from the Sea Coast Shipping logo */
+  --navy: #0f2d4a;
+  --navy-deep: #0a2036;
+  --teal: #266a83;
+  --teal-light: #3d8aa8;
+
+  --ink: #16212c;
+  --muted: #6b7a8a;
+  --line: #e3e8ee;
+  --bg: #eceff3;
+  --card: #ffffff;
+  --sand: #f7f5f0; /* the cream from the logo background */
+  --tint: #eef4f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
